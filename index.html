@@ -256,7 +256,7 @@
                 <div class="card-body">
                   <div class="h5"><span lang="zh">基于深度学习的肺结节病理良恶性判别</span></div>
                   <p lang="zh">目的在临床上对有手术倾向的CT数据进行良恶性分类。<br /><br />
-                    训练数据均有活检或手术的病理金标准，因为开刀过的结节数据分布会有偏移，更倾向于恶性，所以在网络上采用加载Imagenet预训练权重的Resnet18作为backbone，然后经ACSConv将该2D网络转为3D网络，以适应3D输入。损失函数采用BCE结合Foca Loss对难易样本进行调整。<br /><br />
+                    训练数据均有活检或手术的病理金标准，因为开刀过的结节数据分布会有偏移，更倾向于恶性，所以在网络上采用加载Imagenet预训练权重的Resnet18作为backbone，然后经ACSConv将该2D网络转为3D网络，以适应3D输入。损失函数采用BCE结合Focal Loss对难易样本进行调整。<br /><br />
                     测试AUC由0.76提升至0.815，通过ONNX转为Keras模型，集成进术前规划产品。</p> 
                   </div>
               </div>
