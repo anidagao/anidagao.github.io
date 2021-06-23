@@ -76,8 +76,8 @@
               <div class="card-body">
                 <div class="h4 mt-0 title">基础信息</div>
                 <div class="row">
-                  <div class="col-sm-4"><strong class="text-uppercase">出生日期:</strong></div>
-                  <div class="col-sm-8">1991.04.02</div>
+                  <div class="col-sm-4"><strong class="text-uppercase">学       历:</strong></div>
+                  <div class="col-sm-8">硕士</div>
                 </div>
                 <div class="row mt-3">
                   <div class="col-sm-4"><strong class="text-uppercase"><span style='white-space:pre;'>邮       箱:</span></strong></div>
@@ -226,7 +226,7 @@
                 <div class="card-body">
                   <div class="h5"><span lang="zh">结合全身分类的危及器官分割</span></div>
                   <p lang="zh">	负责对CT图像上视神经，甲状腺，颌骨等器官进行自动分割，持续优化算法。<br/>	<br/>	
-                    为了提升分割效率及降低假阳，将CT从头到脚分为10个类别，推理时每个器官只取对应类别的数据进行分割。网络上借鉴FPN思想将UNet模型结合膨胀卷积，提高特征的丰富度。使用Spatial dropout做正则化等。结合 OpenCV 等工具对结果进行区域生长，极值检测，形态学操作等后处理，大幅提升算法的分割精度。 <br/><br/>	
+                    为了提升分割效率及降低假阳，将CT从头到脚分为10个类别，推理时每个器官只取对应类别的数据进行分割。将UNet模型结合ASPP模块，提高特征的丰富度。使用Spatial dropout做正则化等。结合 OpenCV 等工具对结果进行区域生长，极值检测，形态学操作等后处理，大幅提升算法的分割精度。 <br/><br/>	
                     经过单元测试及线上使用反馈验证，鲁棒性较好。如颌骨的平均 dice由 0.7 提高到 0.9，客户满意度显著提升。</p> 
                   </div>
               </div>
@@ -241,7 +241,7 @@
                 <div class="card-body">
                   <div class="h5"><span lang="zh">COPD(慢阻肺)类型评估</span></div>
                   <p lang="zh">通过吸气相CT图像生成COPD的参数响应图PRM，并计算各部分百分比，以对病变类型做出判断。<br /><br/>	
-                    在预处理阶段分割肺区，然后将肺区resize到统一大小，采用SimpleElastix对吸气和呼气双气相CT进行配准获取PRM的mask。网络上采用Unet结合ASPP模块建立分割模型。训练时将前后帧一起送入网络，从而融合相邻帧的空间特征。<br /><br/>	
+                    在预处理阶段分割肺区，然后将肺区resize到统一大小，采用SimpleElastix对吸气和呼气双气相CT进行配准获取PRM的mask。网络上采用Unet建立分割模型。训练时将前后帧一起送入网络，从而融合相邻帧的空间特征。<br /><br/>	
                     测试集上平均DICE在0.85以上，肺气肿，小气道病变及肺正常区占全肺百分比平均误差均在0.03以内。</p> 
                   </div>
               </div>
@@ -303,7 +303,7 @@
             <p style = "line-height:2">
               <b>编程语言</b>: 熟练使用Python，熟悉C/C++。<br />
               <b>操作系统</b>: 熟悉Linux, Windows开发环境。<br />
-              <b>开发框架</b>: 熟练使用Pytorch，Keras，Tensorflow，了解FastAI，MXNet。熟练使用Git，SSH等工具。<br />
+              <b>开发框架</b>: 熟练使用Pytorch，Keras，Tensorflow。熟练使用Docker，Git，SSH等工具。<br />
               <b>开发工具</b>: 熟练使用Numpy，Pandas，Scikit-Learn，Skimage，CV2，SimpleITK等开发工具。<br />
               <b>英语等级</b>: CET-6，无障碍阅读计算机视觉领域英文文献。
             </p>
